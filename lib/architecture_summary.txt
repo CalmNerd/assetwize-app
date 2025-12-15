@@ -1,0 +1,41 @@
+three layers:
+    1. Data layer
+    2. Domain layer
+    3. Presentation layer
+
+    two additional layer: Resources and Shared libarary.
+
+1. Data layer
+    the data module which is the part of the outmost layer is responsible for data retrieval. this can be in the form of API call to the server or a local database.
+    it also contains repository inplementations.
+    This layer has three parts:
+        1. repository:
+            it includes the actual implementation of the repositories in the domain layer.
+            repositories are responsible to coordinate data from the different data sources
+        2. Data sources:
+            it consists of remote and local data sources. remote data source will perform HTTP requests on the api while local data source will cache our persist data.
+        3. Models:
+            it is the representations of Json structure and allows us to interact with our data source.
+
+2. Domain layer
+    It is the innermost part of the layers and has no dependecies on the other layers.
+    Domain layer would be written purely in Dart without any flutter elements,
+    the reason is that the domain should only be concerned with the business logic of the application
+    and not with the implementation details.
+    it contains:
+        1. entitites:
+                the entitites must be our data types or classed that are used in the different part of our software.
+                on in another word, we define in our version of clean that our entities are the objects that can be returned to us or we can send to api 
+        2. repository interfaces:
+                repositories in domain layer or abstract classes or contracts and define the properties and methods that our project will need in a specific feature
+        3. usecases:
+            it includes application specific business rules. each event is an interaction of the user with the systen and we can call this a usecase like signup, login and other interactions.
+            usecases are nothing but bridges between the layers. it's a single call to business logic 
+    
+
+3. Presentation layer:
+    this layer presents the app content that triggers the events that modify the application states.
+    this layer has three parts:
+        1. Pages: which includes application pages.
+        2. State Management: icludes files realated to state management that we use such as bloc or riverpod or other state managements. 
+        3. Widgets: Includes all the specific widgets that we use on the pages.
