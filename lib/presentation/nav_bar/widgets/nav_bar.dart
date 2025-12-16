@@ -10,3 +10,4 @@ class NavBarWidget extends StatelessWidget {
     return const Placeholder();
   }
 }
+

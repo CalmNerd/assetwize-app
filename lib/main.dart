@@ -1,4 +1,4 @@
-import 'package:assetwize_assignment/infrastructure/core/font_family_selector.dart';
+import 'package:assetwize_assignment/presentation/core/utils/font_family_selector.dart';
 import 'package:assetwize_assignment/presentation/home_page.dart';
 import 'package:flutter/material.dart';
 
