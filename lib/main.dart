@@ -1,4 +1,4 @@
-import 'package:assetwize_assignment/presentation/core/utils/font_family_selector.dart';
+import 'package:assetwize_assignment/presentation/utils/font_family_selector.dart';
 import 'package:assetwize_assignment/presentation/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -33,6 +33,7 @@ class _MyAppState extends State<MyApp> {
       ),
       home: Scaffold(
         appBar: AppBar(
+          elevation: 0,
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

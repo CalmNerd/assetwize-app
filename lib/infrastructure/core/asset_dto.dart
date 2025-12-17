@@ -16,16 +16,18 @@
 //   });
 // }
 
-enum AssetType { insurance, jewellery, vehicle, realty, electronics, collectibels, arts }
+import 'package:assetwize_assignment/domain/enums/asset_type.dart';
 
 abstract class AssetDto {
   final String id;
   final String name;
   final AssetType type;
+  final String? imageUrl;
 
   AssetDto({
     required this.id,
     required this.name,
     required this.type,
+    this.imageUrl,
   });
 }
